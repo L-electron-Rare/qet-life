@@ -1,0 +1,15 @@
+<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
+  <uuid uuid="{f32a8046-636c-4257-b654-c285aafeba51}"/>
+  <names>
+    <name lang="fr">Échangeur à plaques</name>
+    <name lang="en">Plate heat exchanger</name>
+  </names>
+  <elementInformations/>
+  <informations>CALORIA - L'Électron Rare</informations>
+  <description>
+    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
+    <dynamic_text z="2" uuid="{3f513401-e812-4a7c-a063-02db88665882}" x="-8" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>HX</text></dynamic_text>
+    <dynamic_text z="3" uuid="{550210ed-9fa4-4229-94bd-ee43e768dbfc}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{3a61ea25-6088-443b-951d-35f89f001ad7}" x="-60" y="-20"/><terminal type="Generic" name="" orientation="w" uuid="{434cbce6-c6fe-4a2a-bfa1-32a47e2f3bdb}" x="-60" y="20"/><terminal type="Generic" name="" orientation="e" uuid="{02f98355-2f45-4a9d-9dfa-96830e6a35f9}" x="60" y="-20"/><terminal type="Generic" name="" orientation="e" uuid="{9cc1068c-6fdb-4fb3-8417-26698228f2d9}" x="60" y="20"/>
+  </description>
+</definition>

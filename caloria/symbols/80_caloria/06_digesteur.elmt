@@ -1,0 +1,15 @@
+<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
+  <uuid uuid="{ae5914c2-4571-4661-8d9f-acdd6346dc1e}"/>
+  <names>
+    <name lang="fr">Digesteur (méthaniseur)</name>
+    <name lang="en">Digester</name>
+  </names>
+  <elementInformations/>
+  <informations>CALORIA - L'Électron Rare</informations>
+  <description>
+    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
+    <dynamic_text z="2" uuid="{a785894f-13a0-4c9a-87a3-fd77630a37e7}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>DIG</text></dynamic_text>
+    <dynamic_text z="3" uuid="{c52beda0-d8b4-45db-80a7-9a64825101c3}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{032aa7f7-7e04-467d-8daf-84d3da565b4e}" x="-60" y="0"/><terminal type="Generic" name="" orientation="n" uuid="{febafa48-d3fc-45ba-9b26-4364e62455b7}" x="0" y="-30"/>
+  </description>
+</definition>

@@ -208,7 +208,7 @@ QGuiApplication::setHighDpiScaleFactorRoundingPolicy(QetSettings::hdpiScaleFacto
 		QString message = "launched-with-args: " + QET::joinWithSpaces(
 					QStringList(qetarg.arguments()));
 		app.sendMessage(message.toUtf8());
-		return 0;
+		// return 0; // [fork macOS] ne pas quitter si verrou single-instance perime
 	}
 
 	QETApp qetapp;

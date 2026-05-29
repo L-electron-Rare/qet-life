@@ -1,0 +1,15 @@
+<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
+  <uuid uuid="{dc28239d-697b-403c-9845-2c6dc6475790}"/>
+  <names>
+    <name lang="fr">CDU (refroidissement liquide)</name>
+    <name lang="en">CDU liquid cooling</name>
+  </names>
+  <elementInformations/>
+  <informations>CALORIA - L'Électron Rare</informations>
+  <description>
+    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
+    <dynamic_text z="2" uuid="{19ad2e6a-479d-4feb-b5b9-a325beb9abf4}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>CDU</text></dynamic_text>
+    <dynamic_text z="3" uuid="{59b0ebba-7429-4e27-88b9-b871a5b5ec98}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{8989d9bc-6091-418d-a8a5-e6963043188d}" x="-60" y="-20"/><terminal type="Generic" name="" orientation="w" uuid="{5da7117c-dc8c-48d3-a4d4-0b2dfbb0969e}" x="-60" y="20"/><terminal type="Generic" name="" orientation="e" uuid="{797f65c5-d80c-4d05-bfe6-cd9aece0fc11}" x="60" y="-20"/><terminal type="Generic" name="" orientation="e" uuid="{9e618c13-e0eb-43b8-a4d9-b99a5de0f134}" x="60" y="20"/>
+  </description>
+</definition>

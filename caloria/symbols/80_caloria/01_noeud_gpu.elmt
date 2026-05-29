@@ -1,0 +1,15 @@
+<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
+  <uuid uuid="{b23130bc-ec2d-482b-9963-7639a98b0db2}"/>
+  <names>
+    <name lang="fr">Nœud GPU (calcul IA)</name>
+    <name lang="en">GPU compute node</name>
+  </names>
+  <elementInformations/>
+  <informations>CALORIA - L'Électron Rare</informations>
+  <description>
+    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
+    <dynamic_text z="2" uuid="{6a62274d-515d-4c24-861d-6aa3672d4138}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>GPU</text></dynamic_text>
+    <dynamic_text z="3" uuid="{78e75dc4-5b0c-487c-a722-c1ab75f656b5}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{dc4a3ea1-3c4d-45a1-9d6b-addf4a1ba67f}" x="-60" y="0"/><terminal type="Generic" name="" orientation="e" uuid="{d46c8652-7fe3-4bf6-b117-4f5a7cd3c617}" x="60" y="0"/>
+  </description>
+</definition>

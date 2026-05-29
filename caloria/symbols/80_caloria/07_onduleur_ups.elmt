@@ -1,0 +1,15 @@
+<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
+  <uuid uuid="{a7c5842b-5682-42ab-b8fd-9fd215fec362}"/>
+  <names>
+    <name lang="fr">Onduleur / UPS</name>
+    <name lang="en">Inverter / UPS</name>
+  </names>
+  <elementInformations/>
+  <informations>CALORIA - L'Électron Rare</informations>
+  <description>
+    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
+    <dynamic_text z="2" uuid="{9e413eed-57c2-4e5a-ab3f-8594545e2e58}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>UPS</text></dynamic_text>
+    <dynamic_text z="3" uuid="{2b006831-e621-4c5b-b80c-762d06d5761d}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{dfe7d3b5-768f-44b4-9f4d-61034c7c4617}" x="-60" y="0"/><terminal type="Generic" name="" orientation="e" uuid="{56b5879d-bb09-4aa4-86e8-91769371c836}" x="60" y="0"/>
+  </description>
+</definition>
