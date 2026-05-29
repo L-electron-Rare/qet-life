@@ -146,6 +146,8 @@ class QETDiagramEditor : public QETMainWindow
 
 	private slots:
 		void exportCaloriaReport();
+		void exportCaloriaBOM();
+		void exportCaloriaWires();
 		void selectionChanged();
 
 	public:

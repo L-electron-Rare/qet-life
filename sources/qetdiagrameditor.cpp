@@ -43,6 +43,11 @@
 #include "undocommand/rotatetextscommand.h"
 #include "diagram.h"
 #include "qetproject.h"
+#include "element.h"
+#include "conductor.h"
+#include "conductorproperties.h"
+#include "elementslocation.h"
+#include "diagramcontext.h"
 #include <QMessageBox>
 #include <QFileInfo>
 #include <QFile>
@@ -795,6 +800,10 @@ void QETDiagramEditor::setUpMenu()
 	QMenu *menu_caloria = new QMenu(tr("&CALORIA"));
 	QAction *act_caloria_report = menu_caloria->addAction(tr("Rapport projet (folios, appareils, conducteurs)\u2026"));
 	connect(act_caloria_report, &QAction::triggered, this, &QETDiagramEditor::exportCaloriaReport);
+	QAction *act_caloria_bom = menu_caloria->addAction(tr("Exporter BOM (CSV)\u2026"));
+	connect(act_caloria_bom, &QAction::triggered, this, &QETDiagramEditor::exportCaloriaBOM);
+	QAction *act_caloria_wires = menu_caloria->addAction(tr("Exporter liste de fils (CSV)\u2026"));
+	connect(act_caloria_wires, &QAction::triggered, this, &QETDiagramEditor::exportCaloriaWires);
 	insertMenu(settings_menu_, menu_caloria);
 	insertMenu(help_menu_, windows_menu);
 
@@ -2501,4 +2510,57 @@ void QETDiagramEditor::exportCaloriaReport()
 	QMessageBox::information(this, tr("CALORIA — Rapport"),
 		tr("Projet : %1\nFolios : %2 · Appareils : %3 · Conducteurs : %4\n\nRapport écrit :\n%5")
 		.arg(prj->title()).arg(dias.count()).arg(nElem).arg(nCond).arg(out));
+}
+
+
+void QETDiagramEditor::exportCaloriaBOM()
+{
+	QETProject *prj = currentProject();
+	if (!prj) { QMessageBox::information(this, tr("CALORIA"), tr("Aucun projet ouvert.")); return; }
+	QMap<QString,int> counts; QMap<QString,QString> example;
+	for (Diagram *d : prj->diagrams())
+		for (Element *e : d->elements()) {
+			QString loc = e->location().toString();
+			QString lt = loc.toLower();
+			if (lt.contains("folio")||lt.contains("renvoi")||lt.contains("nomenclatur")||lt.contains("cartouche")) continue;
+			QString type = loc.section('/', -1);
+			if (type.endsWith(".elmt")) type.chop(5);
+			if (type.isEmpty()) type = e->name();
+			counts[type]++;
+			QString lab = e->elementInformations().value("label").toString();
+			if (!lab.isEmpty()) example[type]=lab;
+		}
+	QString csv = "type;quantite;exemple_repere\n"; int total=0;
+	for (auto it=counts.constBegin(); it!=counts.constEnd(); ++it) {
+		csv += it.key()+";"+QString::number(it.value())+";"+example.value(it.key())+"\n"; total+=it.value();
+	}
+	QString fp = prj->filePath(), out;
+	if (!fp.isEmpty()) { QFileInfo fi(fp); out = fi.absolutePath()+"/"+fi.completeBaseName()+"_BOM.csv"; }
+	else out = QDir::homePath()+"/caloria_BOM.csv";
+	QFile f(out); if (f.open(QIODevice::WriteOnly|QIODevice::Text)) { QTextStream ts(&f); ts<<csv; f.close(); }
+	QMessageBox::information(this, tr("CALORIA — BOM"),
+		tr("BOM : %1 types, %2 appareils.\nFichier :\n%3").arg(counts.size()).arg(total).arg(out));
+}
+
+void QETDiagramEditor::exportCaloriaWires()
+{
+	QETProject *prj = currentProject();
+	if (!prj) { QMessageBox::information(this, tr("CALORIA"), tr("Aucun projet ouvert.")); return; }
+	QString csv = "folio;num;type;section;fonction;cable;couleur\n"; int i=1, n=0;
+	for (Diagram *d : prj->diagrams()) {
+		for (Conductor *c : d->conductors()) {
+			ConductorProperties p = c->properties();
+			QString type = (p.type==ConductorProperties::Single) ? "single" : "multi";
+			csv += QString("%1;%2;%3;%4;%5;%6;%7\n").arg(i).arg(p.text).arg(type)
+					.arg(p.m_wire_section).arg(p.m_function).arg(p.m_cable).arg(p.color.name());
+			n++;
+		}
+		i++;
+	}
+	QString fp = prj->filePath(), out;
+	if (!fp.isEmpty()) { QFileInfo fi(fp); out = fi.absolutePath()+"/"+fi.completeBaseName()+"_fils.csv"; }
+	else out = QDir::homePath()+"/caloria_fils.csv";
+	QFile f(out); if (f.open(QIODevice::WriteOnly|QIODevice::Text)) { QTextStream ts(&f); ts<<csv; f.close(); }
+	QMessageBox::information(this, tr("CALORIA — Liste de fils"),
+		tr("%1 conducteurs exportés.\nFichier :\n%2").arg(n).arg(out));
 }
