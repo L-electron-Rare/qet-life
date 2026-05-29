@@ -1,0 +1,29 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "macos-metal",
+      "displayName": "QET macOS (Qt6, Metal RHI, sans KF6)",
+      "description": "Build natif macOS de QElectroTech : Qt6, backend Metal au runtime, dependances KDE desactivees, chemins d'install corriges.",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/macos-metal",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_PREFIX_PATH": "/opt/homebrew/opt/qt",
+        "ECM_DIR": "/opt/homebrew/share/ECM/cmake",
+        "CMAKE_POLICY_VERSION_MINIMUM": "3.5",
+        "BUILD_WITH_KF6": "OFF",
+        "PACKAGE_TESTS": "OFF",
+        "BUILD_PUGIXML": "ON",
+        "QET_ICONS_PATH": "share/qelectrotech/icons",
+        "QET_APPDATA_PATH": "share/metainfo",
+        "QET_LANG_PATH": "share/qelectrotech/lang",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/macos-install"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "macos-metal", "configurePreset": "macos-metal" }
+  ]
+}
