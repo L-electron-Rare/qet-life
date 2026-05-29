@@ -42,6 +42,12 @@
 #include "undocommand/rotateselectioncommand.h"
 #include "undocommand/rotatetextscommand.h"
 #include "diagram.h"
+#include "qetproject.h"
+#include <QMessageBox>
+#include <QFileInfo>
+#include <QFile>
+#include <QTextStream>
+#include <QDir>
 #include "TerminalStrip/ui/terminalstripeditorwindow.h"
 #include "ui/diagrameditorhandlersizewidget.h"
 #include "TerminalStrip/ui/addterminalstripitemdialog.h"
@@ -786,6 +792,10 @@ void QETDiagramEditor::setUpMenu()
 	insertMenu(settings_menu_, menu_edition);
 	insertMenu(settings_menu_, menu_project);
 	insertMenu(settings_menu_, menu_affichage);
+	QMenu *menu_caloria = new QMenu(tr("&CALORIA"));
+	QAction *act_caloria_report = menu_caloria->addAction(tr("Rapport projet (folios, appareils, conducteurs)\u2026"));
+	connect(act_caloria_report, &QAction::triggered, this, &QETDiagramEditor::exportCaloriaReport);
+	insertMenu(settings_menu_, menu_caloria);
 	insertMenu(help_menu_, windows_menu);
 
 	// File menu
@@ -2465,4 +2475,30 @@ void QETDiagramEditor::generateTerminalBlock()
 				     QObject::tr("Error launching qet_tb_generator plugin"),
 				     message);
 	}
+}
+
+
+void QETDiagramEditor::exportCaloriaReport()
+{
+	QETProject *prj = currentProject();
+	if (!prj) { QMessageBox::information(this, tr("CALORIA"), tr("Aucun projet ouvert.")); return; }
+	const QList<Diagram *> dias = prj->diagrams();
+	int nElem = 0, nCond = 0, i = 1;
+	QString body = "# Rapport CALORIA — " + prj->title() + "\n\n";
+	body += QString("Fichier : %1\nFolios : %2\n\n").arg(prj->filePath()).arg(dias.count());
+	body += "| # | Folio | Appareils | Conducteurs |\n|---|---|---|---|\n";
+	for (Diagram *d : dias) {
+		int e = d->elements().count(), c = d->conductors().count();
+		nElem += e; nCond += c;
+		body += QString("| %1 | %2 | %3 | %4 |\n").arg(i++).arg(d->title()).arg(e).arg(c);
+	}
+	body += QString("\n**Total : %1 appareils, %2 conducteurs.**\n").arg(nElem).arg(nCond);
+	QString out, fp = prj->filePath();
+	if (!fp.isEmpty()) { QFileInfo fi(fp); out = fi.absolutePath() + "/" + fi.completeBaseName() + "_rapport_caloria.md"; }
+	else { out = QDir::homePath() + "/rapport_caloria.md"; }
+	QFile f(out);
+	if (f.open(QIODevice::WriteOnly | QIODevice::Text)) { QTextStream ts(&f); ts << body; f.close(); }
+	QMessageBox::information(this, tr("CALORIA — Rapport"),
+		tr("Projet : %1\nFolios : %2 · Appareils : %3 · Conducteurs : %4\n\nRapport écrit :\n%5")
+		.arg(prj->title()).arg(dias.count()).arg(nElem).arg(nCond).arg(out));
 }
