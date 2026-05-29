@@ -1,5 +1,5 @@
-<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
-  <uuid uuid="{66f73ebf-df1c-4ec9-a584-6ed6fd0e5c4b}"/>
+<definition type="element" link_type="simple" version="0.100.0" width="80" height="60" hotspot_x="40" hotspot_y="30">
+  <uuid uuid="{2d4ea522-e797-4f2e-89c8-4e062f8d53cb}"/>
   <names>
     <name lang="fr">Dry-cooler (secours)</name>
     <name lang="en">Dry cooler</name>
@@ -7,9 +7,15 @@
   <elementInformations/>
   <informations>CALORIA - L'Électron Rare</informations>
   <description>
-    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
-    <dynamic_text z="2" uuid="{e00a4d0e-47f6-4000-93d3-c286a0c63e2c}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>DRY</text></dynamic_text>
-    <dynamic_text z="3" uuid="{4706c7b0-c185-4425-9416-1ad9f0c78c8e}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
-    <terminal type="Generic" name="" orientation="w" uuid="{c04e8c1b-dfca-45bb-9b37-e46dc63c2965}" x="-60" y="0"/><terminal type="Generic" name="" orientation="e" uuid="{001b01de-90e8-4022-a39d-54e3d8f2e77f}" x="60" y="0"/>
+    <rect x="-22" y="-18" width="44" height="14" rx="0" ry="0" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <polygon x1="-18" y1="-15" x2="-10" y2="-7" x3="-2" y3="-15" x4="6" y4="-7" x5="14" y5="-15" x6="18" y6="-11" closed="false" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <ellipse x="-9" y="-1" width="18" height="18" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <arc x="-9" y="-1" width="18" height="18" start="30" angle="120" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <arc x="-9" y="-1" width="18" height="18" start="210" angle="120" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-40" y1="-8" x2="-22" y2="-8" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="22" y1="-8" x2="40" y2="-8" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <dynamic_text z="2" uuid="{ff55629a-d4cd-4d01-9dc8-eff22e800540}" x="-40" y="32" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,8,-1,5,50,0,0,0,0,0"><text>DRY</text></dynamic_text>
+    <dynamic_text z="3" uuid="{f6d4fc3a-f287-44b3-9fc4-13789bae36bf}" x="-40" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{aadd1d40-0ac3-4072-b36f-9f8eb4bd0c7e}" x="-40" y="-8"/><terminal type="Generic" name="" orientation="e" uuid="{e21bc799-09f1-4a47-b0b2-8024c4b2efe0}" x="40" y="-8"/>
   </description>
 </definition>

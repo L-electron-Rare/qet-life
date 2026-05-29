@@ -1,5 +1,5 @@
-<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
-  <uuid uuid="{fcb4905b-7585-40a3-97d8-536ba4bd7045}"/>
+<definition type="element" link_type="simple" version="0.100.0" width="80" height="60" hotspot_x="40" hotspot_y="30">
+  <uuid uuid="{bfd5ac51-6f5d-4dfc-a5b8-03a8c18b5587}"/>
   <names>
     <name lang="fr">PAC eau/eau (ECS)</name>
     <name lang="en">Water/water heat pump</name>
@@ -7,9 +7,13 @@
   <elementInformations/>
   <informations>CALORIA - L'Électron Rare</informations>
   <description>
-    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
-    <dynamic_text z="2" uuid="{13b71915-aa86-4e27-aead-0a92919236a1}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>PAC</text></dynamic_text>
-    <dynamic_text z="3" uuid="{2ad2d715-1195-4943-923a-5944c9d311ae}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
-    <terminal type="Generic" name="" orientation="w" uuid="{54044926-0112-407a-ab17-4845d1f690f7}" x="-60" y="-20"/><terminal type="Generic" name="" orientation="w" uuid="{9bef1343-d887-4a2e-945c-923f36b29a2f}" x="-60" y="20"/><terminal type="Generic" name="" orientation="e" uuid="{c44553f4-a8d8-4451-8432-4d19aafc7440}" x="60" y="0"/>
+    <ellipse x="-18" y="-18" width="36" height="36" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <polygon x1="-6" y1="-6" x2="-6" y2="6" x3="7" y3="0" closed="true" antialias="true" style="line-style:normal;line-weight:normal;filling:#000000;color:#000000"/>
+    <line x1="-40" y1="-10" x2="-18" y2="-10" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-40" y1="10" x2="-18" y2="10" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="18" y1="0" x2="40" y2="0" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <dynamic_text z="2" uuid="{0a92adec-7d8d-40c1-a41c-ccb3a37b3b81}" x="-40" y="32" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,8,-1,5,50,0,0,0,0,0"><text>PAC</text></dynamic_text>
+    <dynamic_text z="3" uuid="{69bda357-ab21-4da7-9e51-1441268bc8b2}" x="-40" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{03f9527f-d283-4971-8f3a-745e0a28f528}" x="-40" y="-10"/><terminal type="Generic" name="" orientation="w" uuid="{d06f2a57-a633-4b68-a4b3-c689cca77788}" x="-40" y="10"/><terminal type="Generic" name="" orientation="e" uuid="{697a0689-e9af-4ee3-a9ac-285a01b71e9c}" x="40" y="0"/>
   </description>
 </definition>

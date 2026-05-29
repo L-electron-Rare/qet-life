@@ -1,5 +1,5 @@
-<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
-  <uuid uuid="{48550eaa-bbca-4275-b00b-92579ee8ec70}"/>
+<definition type="element" link_type="simple" version="0.100.0" width="80" height="60" hotspot_x="40" hotspot_y="30">
+  <uuid uuid="{dd9d0872-47a2-4603-a28f-00e40640c9cc}"/>
   <names>
     <name lang="fr">Batterie LFP</name>
     <name lang="en">LFP battery</name>
@@ -7,9 +7,14 @@
   <elementInformations/>
   <informations>CALORIA - L'Électron Rare</informations>
   <description>
-    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
-    <dynamic_text z="2" uuid="{41146400-b43c-433f-a381-5577fd2dd12b}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>BAT</text></dynamic_text>
-    <dynamic_text z="3" uuid="{3eb1bd86-126f-4258-841b-370788d9d4e1}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
-    <terminal type="Generic" name="" orientation="e" uuid="{d1cfa736-c99e-46e4-9b68-d9fec754a770}" x="60" y="-20"/><terminal type="Generic" name="" orientation="e" uuid="{26864519-8e67-46b2-bcc1-e12932780748}" x="60" y="20"/>
+    <line x1="-40" y1="0" x2="-7" y2="0" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="7" y1="0" x2="40" y2="0" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-7" y1="-12" x2="-7" y2="12" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-3" y1="-6" x2="-3" y2="6" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:thick;filling:none;color:#000000"/>
+    <line x1="3" y1="-12" x2="3" y2="12" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="7" y1="-6" x2="7" y2="6" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:thick;filling:none;color:#000000"/>
+    <dynamic_text z="2" uuid="{90cb1d0c-6788-436b-b9cb-fac98254f97a}" x="-40" y="32" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,8,-1,5,50,0,0,0,0,0"><text>BAT</text></dynamic_text>
+    <dynamic_text z="3" uuid="{93f4c4a8-245d-454e-8d37-a475fd58845e}" x="-40" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{1199a550-6dd6-4b98-aa4c-8af4e0a3d7f4}" x="-40" y="0"/><terminal type="Generic" name="" orientation="e" uuid="{8dfc70af-25f9-4dca-b014-b3982a760abf}" x="40" y="0"/>
   </description>
 </definition>

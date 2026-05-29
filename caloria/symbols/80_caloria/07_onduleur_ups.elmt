@@ -1,5 +1,5 @@
-<definition type="element" link_type="simple" version="0.100.0" width="120" height="60" hotspot_x="60" hotspot_y="30">
-  <uuid uuid="{a7c5842b-5682-42ab-b8fd-9fd215fec362}"/>
+<definition type="element" link_type="simple" version="0.100.0" width="80" height="60" hotspot_x="40" hotspot_y="30">
+  <uuid uuid="{f01a0586-444c-416e-a90d-2628bb53eeda}"/>
   <names>
     <name lang="fr">Onduleur / UPS</name>
     <name lang="en">Inverter / UPS</name>
@@ -7,9 +7,16 @@
   <elementInformations/>
   <informations>CALORIA - L'Électron Rare</informations>
   <description>
-    <rect antialias="true" rx="4" ry="4" x="-60" y="-30" width="120" height="60" style="line-style:normal;line-weight:thin;filling:none;color:#1f8e5a"/>
-    <dynamic_text z="2" uuid="{9e413eed-57c2-4e5a-ab3f-8594545e2e58}" x="-12" y="-7" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,11,-1,5,75,0,0,0,0,0"><text>UPS</text></dynamic_text>
-    <dynamic_text z="3" uuid="{2b006831-e621-4c5b-b80c-762d06d5761d}" x="-60" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
-    <terminal type="Generic" name="" orientation="w" uuid="{dfe7d3b5-768f-44b4-9f4d-61034c7c4617}" x="-60" y="0"/><terminal type="Generic" name="" orientation="e" uuid="{56b5879d-bb09-4aa4-86e8-91769371c836}" x="60" y="0"/>
+    <rect x="-18" y="-18" width="36" height="36" rx="0" ry="0" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-18" y1="18" x2="18" y2="-18" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-40" y1="0" x2="-18" y2="0" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="18" y1="0" x2="40" y2="0" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-14" y1="7" x2="-6" y2="7" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <line x1="-14" y1="11" x2="-6" y2="11" end1="none" end2="none" length1="1.5" length2="1.5" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <arc x="2" y="-13" width="7" height="7" start="0" angle="180" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <arc x="9" y="-13" width="7" height="7" start="180" angle="180" antialias="true" style="line-style:normal;line-weight:normal;filling:none;color:#000000"/>
+    <dynamic_text z="2" uuid="{a587f477-002a-4b0d-8361-f3091fc5e459}" x="-40" y="32" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="UserText" font="Sans Serif,8,-1,5,50,0,0,0,0,0"><text>UPS</text></dynamic_text>
+    <dynamic_text z="3" uuid="{3a89d4c4-3538-4be6-be36-fbdc80743786}" x="-40" y="-46" Valignment="AlignTop" rotation="0" text_width="-1" keep_visual_rotation="false" Halignment="AlignLeft" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0"><text></text><info_name>label</info_name></dynamic_text>
+    <terminal type="Generic" name="" orientation="w" uuid="{703c164c-144b-4bc6-8fb3-bc3942652d7b}" x="-40" y="0"/><terminal type="Generic" name="" orientation="e" uuid="{18d47375-fca6-4ae4-b0d9-c3f0f1dee717}" x="40" y="0"/>
   </description>
 </definition>
