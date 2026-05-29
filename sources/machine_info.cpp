@@ -134,7 +134,7 @@ void MachineInfo::send_info_to_debug()
 	qInfo()<< " For data-files (user-/company-collections, titleblocks, etc.):";
 	qInfo()<< " App Data Location:"<< QETApp::dataDir();
 	qInfo()<< " Directory for project's autosave files (stalefiles):";
-	qInfo()<< " Autosave:"<< QETApp::autosaveDir() % "/autosave";
+	qInfo()<< " Autosave:"<< QETApp::configDir() % "autosave";
 	// qInfo()<< " App Local DataLocation:"<< QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
 	// qInfo()<< " Home Location:"<< QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
 	// qInfo()<< " Runtime Location:"<< QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation);
